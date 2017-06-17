@@ -11,6 +11,7 @@ html * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+
 }
 
 body {
@@ -109,7 +110,7 @@ body {
         left: 0vw;
     }
 }
-main #indexMain {
+#indexMain {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
@@ -126,29 +127,31 @@ main #indexMain {
 }
 
 article {
-
     overflow: hidden;
     margin: 1em;
     width: var(--article-width);
-
+    overflow: hidden;
     min-width: 300px;
     max-height: 20vh;
     height: calc(var(--article-width) * 1.62);
+    white-space: nowrap;
 }
 
 .container {
     position: relative;
+    overflow: hidden;
+    white-space: nowrap;
 }
 .image {
-
     opacity: 1;
     display: block;
     transition: .5s ease;
-    backface-visibility: hidden;
+    overflow: hidden;
+    white-space: nowrap;
 }
 
 .middle {
-
+    overflow: hidden;
     margin: 1em;
     transition: 1s;
     opacity: 0;
@@ -157,12 +160,18 @@ article {
     left: 50%;
     transform: translate(-62%, -65%);
 }
-.container:hover .image {
+
+.container:hover .image,
+.container:focus .image {
     opacity: 0.3;
+    transform: scale(1.2);
+    overflow: hidden;
 }
 
+.container:focus .middle,
 .container:hover .middle {
     opacity: 1;
+    overflow: hidden;
 }
 
 .text {
@@ -172,11 +181,12 @@ article {
     padding: 16px 32px;
 }
 
-    #facilities1 {
-        background-image: url(images/facilities1.jpg);
-        background-repeat: no-repeat;
-        background-size: cover;
-    }
+#facilities1 {
+    background-image: url(images/facilities1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+}
 
     #facilities2 {
         background-image: url(images/facilities2.jpg);
@@ -218,8 +228,13 @@ article {
         background: var(--header-color);
     }
 
-#resform {
-    height:20vh;
+#resForm {
+
+    position: relative;
+    padding-top: 0em;
+    margin-top: 10em;
+
+    font-size: .8em;
 }
 form {
     height: 20vh;
