@@ -1,0 +1,64 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+<title></title>
+    <link href="ghendoStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind:500" rel="stylesheet">
+    <script src="ghendoJavascript.js"></script>
+    </head>
+<body>
+
+    <header id="myhead">
+
+        <object id="logo" type="image/svg+xml" data="images/logoBruny.svg"></object>
+
+        <nav class="site-nav">
+            <ul>
+
+                <li><a href="index.html">Home</a>   </li>
+                <li><a href="reservations.html">Reservations</a>   </li>
+                <li><a href="todo.html">To Do</a>   </li>
+                <li><a href="places.html">Places</a>   </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <form name="todoForm">
+            <table>
+                <tbody>
+                    <tr>
+                        <td>Order</td>
+                        <td><input type="text" id="todoOrder" name="todoOrder" required></td>
+                        <td>Things to do</td>
+                        <td id="todoThings">
+                            <select>
+                                <option value="Blue Mountains">Blue Mountains</option>
+                                <option value="Opera House">Opera House</option>
+                                <option value="Central Coast">Central Coast</option>
+                                <option value="Ulladulla">Ulladulla</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><button id="todoSave" onclick="todoSaveItem()" type="button">Save</button></td>
+                        <td><button id="todoDelete" onclick="todoDeleteItem()" type="button">Remove</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <table>
+               <tbody id="todoList">
+
+               </tbody>
+            </table>
+        </form>
+
+    </main>
+
+    <footer>
+        <p>Author Graeme Henderson 2017 </p>
+        <p id="date" >Date </p>
+
+    </footer>
+    </body>
+</html>

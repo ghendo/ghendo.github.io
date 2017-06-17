@@ -1,0 +1,62 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Reservations</title>
+    <link href="ghendoStyle.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css?family=Hind:500" rel="stylesheet">
+    <script src="ghendoJavascript.js"></script>
+    </head>
+<body>
+
+    <header id="myhead">
+
+        <object id="logo" type="image/svg+xml" data="images/logoBruny.svg"></object>
+
+        <nav class="site-nav">
+            <ul>
+
+                <li><a href="index.html">Home</a>   </li>
+                <li><a href="reservations.html">Reservations</a>   </li>
+                <li><a href="todo.html">To Do</a>   </li>
+                <li><a href="places.html">Places</a>   </li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <div id="resform">
+        <form name="resForm">
+            <table>
+                <tbody>
+        <tr><td>Reservation No </td><td><input type="text" id="resNumber" name="resNumber" required ></td><td><p id="PresNumber"></p></td></tr>
+        <tr><td>First Name </td><td><input type="text" id="fname" name="fname" required ></td><td><p id="Pfname"></p></td></tr>
+        <tr><td>Last Name </td> <td><input type="text" id="lname" name="lname" required ></td><td><p id="Plname"></p></td></tr>
+        <tr><td>Address </td>   <td><textarea id="address" name="address" rows="4" required></textarea ></td><td><p id="Paddress"></p></td></tr>
+        <tr><td>Arrival Date </td>  <td><input type="date" id="arrDate" name="arrDate" required ></td><td><p id="ParrDate"></p></td></tr>
+        <tr><td>Departure date </td><td><input type="date" id="depDate" name="depDate" required ></td><td><p id="PdepDate"></p></td></tr>
+        <tr><td>Room Number </td>   <td><input type="number" id="rooNumber" name="rooNumber" min="1" max="50" required ></td><td><p id="ProoNumber"></p></td></tr>
+        <tr><td>Email </td>     <td><input type="email" id="email" name="email" required onchange="emailCheck()"><p></p></p></td><td><p id="Pemail"></p></td></tr>
+        <tr><td>Phone Number </td>  <td><input type="tel" id="phnNumber" name="phnNumber" required ></td><td><p id="PphnNumber"></p></td></tr>
+                </tbody>
+            </table>
+
+
+            <button id="resSave" onclick="SaveObject()" type="button">Save</button>
+            <button id="resModify" onclick="ModifyItem()" type="button">Modify</button>
+            <button id="resDelete" onclick="DeleteItem()" type ="button">Delete</button>
+            <button id="resReset" onclick="ResetItem()" type="button">Reset</button>
+            <button id="resClear" onclick="ClearAll()" type="button">Delete All</button>
+        </form>
+            <p id="output"></p>
+
+        </div>
+    </main>
+
+    <footer>
+        <p>Author Graeme Henderson 2017 </p>
+        <p id="date" >Date </p>
+
+
+    </footer>
+    </body>
+</html>
