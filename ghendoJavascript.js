@@ -27,11 +27,15 @@ switch (mm) {
 }
 document.addEventListener('DOMContentLoaded', function () {
     document.getElementById("myhead").style.backgroundImage = "url('images/" + season + "Tas.jpg')";
-    var d = new Date();
-    document.getElementById("date").innerHTML = d.toDateString() + " " + d.toLocaleTimeString();
-
-
 }, false);
+
+var myVar = setInterval(function () { myTimer() }, 1000);
+
+function myTimer() {
+    var d = new Date();
+    var t = d.toDateString() + " " + d.toLocaleTimeString();
+    document.getElementById("date").innerHTML = t;
+}
 
 function resFormVailid(){
 var resNumber = document.getElementById("resNumber");
@@ -44,10 +48,7 @@ var rooNumber = document.getElementById("rooNumber");
 var email = document.getElementById("email");
 var phnNumber = document.getElementById("phnNumber");
 if(
-
-
 resForm.checkValidity() == false
-
 )
 
 
